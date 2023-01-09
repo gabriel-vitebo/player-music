@@ -39,6 +39,12 @@ body {
   padding: 4rem;
 }
 
+.card-img {
+  background: url(./assets/album-elodia.jpg) no-repeat center center / cover;
+  height: 19rem;
+  border-radius: .6rem;
+}
+
 h1 {
   font-family: var(--primary-font);
   color: var(--text-color);
