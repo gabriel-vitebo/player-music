@@ -40,7 +40,7 @@ body {
 }
 
 .card-img {
-  background: url(./assets/album-elodia.jpg) no-repeat center center / cover;
+  background: url() no-repeat center center / cover;
   height: 19rem;
   border-radius: .6rem;
 }
