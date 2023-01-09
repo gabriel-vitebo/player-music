@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0F0D13;
+  --card-bg: #2A2141;
+  --text-color: #E1E1E6;
+  --icons-color: #E1E1E6;
+  --seekbar: #D9D9D9;
+  --timer-color: #C4C4CC;
+
+  --primary-font: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#player {
+  width: 90%;
+  background-color: var(--card-bg);
+  max-width: 27rem;
+  border-radius: 1rem;
+}
+
+.card {
+  padding: 4rem;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 2.8rem 0 1rem 0;
+}
+
+p {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.controls-audio {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.timeLine {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--seekbar);
+  border-radius: 1rem;
+  height: 0.6rem;
+  opacity: 0.3;
+  width: 100%;
+}
+
+.timeLine::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: var(--seekbar);
+}
+
+.timeLine::-moz-range-thumb {
+  width: 100%;
+  background-color: var(--seekbar);
+}
+
+.timeLine::-ms-thumb {
+  width: 100%;
+  background-color: var(--seekbar);
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.s2 {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--timer-color);
+  margin-top: 1rem;
+}
