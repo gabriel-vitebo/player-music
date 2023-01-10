@@ -1,4 +1,4 @@
-[] - separa as pastas
+[x] - separa as pastas
   - index.js para executar tudo
   - player.js para a lógica do projeto
   - playerControl.js para os controles do player
