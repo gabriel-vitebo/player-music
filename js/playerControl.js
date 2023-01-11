@@ -9,23 +9,23 @@ const previousMusic = document.querySelector(".back-control")
 export function PlayerControls() {
 
   play.addEventListener('click', () => {
-    player.audio.play()
+    player.play()
     play.classList.add('hide')
     pause.classList.remove('hide')
   })
   
   pause.addEventListener('click', () => {
-    player.audio.pause()
+    player.pause()
     play.classList.remove("hide")
     pause.classList.add("hide")
   })
 
-  player.audio.addEventListener('ended', () => {
-    player.nextEnd()
-  })
+  
 
   nextMusic.addEventListener('click', () => {
     player.next()
+    play.classList.add("hide")
+    pause.classList.remove("hide")
   })
 
 }

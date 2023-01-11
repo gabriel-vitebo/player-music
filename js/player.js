@@ -9,7 +9,6 @@ export function Player() {
   let audioData = audios
   let currentPlaying = 0
   let currentAudio = audioData[currentPlaying]
-  console.log(audioData[1])
   let audio = new Audio(path(currentAudio.file))
   
   creatingTheMusicCard()
@@ -17,30 +16,29 @@ export function Player() {
     cover.style.background = `url(${path(currentAudio.cover)}) no-repeat center center / cover`
     title.innerText = currentAudio.title
     artist.innerText = currentAudio.artist
-    audio
-  }
-  
-  function nextEnd() {
-    currentPlaying++
-    currentAudio = audioData[currentPlaying]
-    creatingTheMusicCard()
-    play()
-    if(currentPlaying == audioData.length) {
-      restart()
-    }
   }
   
   function next() {
-    currentPlaying++
-    currentAudio = audioData[currentPlaying]
-    creatingTheMusicCard()
+    update()
     if(currentPlaying == audioData.length) {
       restart()
     }
   }
 
+  function update() {
+    currentPlaying++
+    currentAudio = audioData[currentPlaying]
+    audio.pause()
+    audio = new Audio(path(currentAudio.file))
+    creatingTheMusicCard()
+    play()
+  }
+
   function play() {
     audio.play()
+  }
+  function pause() {
+    audio.pause() 
   }
 
   function restart() {
@@ -48,11 +46,10 @@ export function Player() {
     creatingTheMusicCard()
 
   }
-  
 
   return {
-    audio,
     next,
-    nextEnd,
+    play,
+    pause
   }
 }
