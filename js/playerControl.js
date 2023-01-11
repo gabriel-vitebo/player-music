@@ -38,8 +38,11 @@ export function PlayerControls() {
     player.setSeek(seekbar.value)
   })
 
+
   player.audio.addEventListener("timeupdate", () => {
     player.timeUpdate()
   })
+
+  console.log(player.audio)
 
 }

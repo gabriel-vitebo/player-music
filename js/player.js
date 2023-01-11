@@ -15,10 +15,13 @@ export function Player() {
   let audio = new Audio(path(currentAudio.file))
   
   creatingTheMusicCard()
+  
+
   function creatingTheMusicCard() {
     cover.style.background = `url(${path(currentAudio.cover)}) no-repeat center center / cover`
     title.innerText = currentAudio.title
     artist.innerText = currentAudio.artist
+    
   }
   
   function next() {
@@ -39,7 +42,6 @@ export function Player() {
     audio = new Audio(path(currentAudio.file))
     creatingTheMusicCard()
     play()
-    
   }
 
   function retry() {
@@ -51,7 +53,8 @@ export function Player() {
     play()
     
   }
-
+  
+  
   function play() {
     audio.play()
   }
