@@ -25,8 +25,21 @@ export function Player() {
     }
   }
 
+  function previous() {
+    retry()
+  }
+
   function update() {
     currentPlaying++
+    currentAudio = audioData[currentPlaying]
+    audio.pause()
+    audio = new Audio(path(currentAudio.file))
+    creatingTheMusicCard()
+    play()
+  }
+
+  function retry() {
+    currentPlaying--
     currentAudio = audioData[currentPlaying]
     audio.pause()
     audio = new Audio(path(currentAudio.file))
@@ -44,12 +57,12 @@ export function Player() {
   function restart() {
     currentPlaying = 0
     creatingTheMusicCard()
-
   }
 
   return {
     next,
     play,
-    pause
+    pause,
+    previous
   }
 }

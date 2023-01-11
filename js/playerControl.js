@@ -20,12 +20,14 @@ export function PlayerControls() {
     pause.classList.add("hide")
   })
 
-  
-
   nextMusic.addEventListener('click', () => {
     player.next()
     play.classList.add("hide")
     pause.classList.remove("hide")
+  })
+
+  previousMusic.addEventListener('click', () => {
+    player.previous()
   })
 
 }
