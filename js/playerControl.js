@@ -30,4 +30,16 @@ export function PlayerControls() {
     player.previous()
   })
 
+  player.seekbar.addEventListener("input", () => {
+    player.setSeek(seekbar.value)
+  })
+
+  player.seekbar.addEventListener("change", () => {
+    player.setSeek(seekbar.value)
+  })
+
+  player.audio.addEventListener("timeupdate", () => {
+    player.timeUpdate()
+  })
+
 }

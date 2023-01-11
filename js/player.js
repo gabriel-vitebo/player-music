@@ -1,9 +1,12 @@
 import audios from "./data.js"
-import { path } from "./utils.js"
+import { path, secondsToMinutes } from "./utils.js"
 
 const cover = document.querySelector('.card-img')
 const title = document.querySelector(".card-content h1")
 const artist = document.querySelector(".artist")
+const currentDuration = document.querySelector("#current-duration")
+const totalDuration = document.querySelector("#total-duration")
+const seekbar = document.querySelector("#seekbar")
 
 export function Player() {
   let audioData = audios
@@ -36,6 +39,7 @@ export function Player() {
     audio = new Audio(path(currentAudio.file))
     creatingTheMusicCard()
     play()
+    
   }
 
   function retry() {
@@ -45,6 +49,7 @@ export function Player() {
     audio = new Audio(path(currentAudio.file))
     creatingTheMusicCard()
     play()
+    
   }
 
   function play() {
@@ -59,10 +64,28 @@ export function Player() {
     creatingTheMusicCard()
   }
 
+  function setSeek(value) {
+    audio.currentTime = value
+  }
+
+  function timeUpdate() {
+    currentDuration.innerText = secondsToMinutes(audio.currentTime)
+    seekbar.value = audio.currentTime
+  }
+
+  seekbar.max = audio.duration
+  totalDuration.innerText = secondsToMinutes(audio.duration)
+
   return {
     next,
     play,
     pause,
-    previous
+    previous,
+    timeUpdate,
+    setSeek,
+    audio,
+    seekbar,
+    totalDuration,
+    secondsToMinutes
   }
 }

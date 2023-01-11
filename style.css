@@ -85,7 +85,6 @@ button {
 }
 
 .timeLine::-webkit-slider-thumb {
-  -webkit-appearance: none;
   width: 100%;
   background-color: var(--seekbar);
 }
