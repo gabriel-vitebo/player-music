@@ -6,8 +6,8 @@
 [x] - Pegar o titulo/artista/album
 [x] - fazer a lógica de dar play/pause na música
 [x] - fazer a ação do play/pause
-[] - fazer a lógica de avançar a música
-[] - fazer a ação de avançar a música
+[x] - fazer a lógica de avançar a música
+[x] - fazer a ação de avançar a música
 [] - pegar o tempo da musica
 [] - fazer a lógica do tempo da musica acompanhar a musica
 [] - fazer a lógica de fazer a barra de som acompanhar

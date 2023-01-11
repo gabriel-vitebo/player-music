@@ -37,6 +37,7 @@ body {
 
 .card {
   padding: 4rem;
+  position: relative;
 }
 
 .card-img {
@@ -110,4 +111,14 @@ button {
   font-size: 1.4rem;
   color: var(--timer-color);
   margin-top: 1rem;
+}
+
+.next-control {
+  position: absolute;
+  left: 48rem;
+}
+
+.back-control {
+  position: absolute;
+  right: 48rem;
 }
