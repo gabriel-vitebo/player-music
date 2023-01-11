@@ -3,9 +3,9 @@
   - player.js para a lógica do projeto
   - playerControl.js para os controles do player
   - utils.js para separa as funçoes uteis para o futuro
-[] - Pegar o titulo/artista/album
-[] - fazer a lógica de dar play/pause na música
-[] - fazer a ação do play/pause
+[x] - Pegar o titulo/artista/album
+[x] - fazer a lógica de dar play/pause na música
+[x] - fazer a ação do play/pause
 [] - fazer a lógica de avançar a música
 [] - fazer a ação de avançar a música
 [] - pegar o tempo da musica
