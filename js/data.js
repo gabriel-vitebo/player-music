@@ -27,7 +27,7 @@ export default [
     title: "Basket Case",
     artist: "Dookie",
     cover: "album-dookie.jpg",
-    file: "Basket-case.mp3",
+    file: "Basket-Case.mp3",
   },
   {
     title: "Teenagers",
