@@ -8,9 +8,9 @@
 [x] - fazer a ação do play/pause
 [x] - fazer a lógica de avançar a música
 [x] - fazer a ação de avançar a música
-[] - pegar o tempo da musica
-[] - fazer a lógica do tempo da musica acompanhar a musica
-[] - fazer a lógica de fazer a barra de som acompanhar
+[x] - pegar o tempo da musica
+[x] - fazer a lógica do tempo da musica acompanhar a musica
+[x] - fazer a lógica de fazer a barra de som acompanhar
 
 posso criar as funçoes dentro de uma export default dentro do arquivo player.js, nela vou importa os arquivos do data.js/utils.js
 

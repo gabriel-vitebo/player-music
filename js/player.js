@@ -41,7 +41,6 @@ export function Player() {
     audio.pause()
     audio = new Audio(path(currentAudio.file))
     creatingTheMusicCard()
-    play()
   }
 
   function retry() {
@@ -50,13 +49,17 @@ export function Player() {
     audio.pause()
     audio = new Audio(path(currentAudio.file))
     creatingTheMusicCard()
-    play()
     
   }
   
   
   function play() {
+    seekbar.max = audio.duration
+    totalDuration.innerText = secondsToMinutes(audio.duration)
     audio.play()
+    audio.addEventListener("timeupdate", () => {
+      timeUpdate()
+    })
   }
   function pause() {
     audio.pause() 
@@ -76,9 +79,6 @@ export function Player() {
     seekbar.value = audio.currentTime
   }
 
-  seekbar.max = audio.duration
-  totalDuration.innerText = secondsToMinutes(audio.duration)
-
   return {
     next,
     play,
@@ -89,6 +89,6 @@ export function Player() {
     audio,
     seekbar,
     totalDuration,
-    secondsToMinutes
+    secondsToMinutes,
   }
 }

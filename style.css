@@ -37,7 +37,6 @@ body {
 
 .card {
   padding: 4rem;
-  position: relative;
 }
 
 .card-img {
@@ -112,12 +111,48 @@ button {
   margin-top: 1rem;
 }
 
-.next-control {
-  position: absolute;
-  left: 35rem;
-}
 
-.back-control {
-  position: absolute;
-  right: 35rem;
+@media (min-width: 700px) {
+  #player {
+    width: 40rem;
+    height: 30.7rem;
+    max-width: 90%;
+    position: absolute;
+  }
+
+  .card-img {
+  background: url() no-repeat center center / cover;
+  height: 10rem;
+  width: 10rem;
+  border-radius: .6rem;
+  }
+
+  h1 {
+    position: relative;
+    left: 12rem;
+    top: -12rem;
+    font-size: 2.4rem;
+  }
+
+  p{
+    position: relative;
+    left: 12rem;
+    top: -12rem;
+    font-size: 1.9rem;
+  }
+
+  .controls-audio {
+    position: relative;
+    top: -8rem;
+  }
+
+  .timeLine {
+    position: relative;
+    top: -9rem;
+  }
+
+  .timer {
+    position: relative;
+    top: -9rem;
+  }
 }

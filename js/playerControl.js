@@ -1,6 +1,8 @@
 import { Player } from "./player.js";
 const player = Player()
 
+const retro = document.querySelector(".retro-control")
+const advance = document.querySelector(".advence-control")
 const play = document.querySelector(".play-control")
 const pause = document.querySelector(".pause-control")
 const nextMusic = document.querySelector(".next-control")
@@ -22,12 +24,14 @@ export function PlayerControls() {
 
   nextMusic.addEventListener('click', () => {
     player.next()
-    play.classList.add("hide")
-    pause.classList.remove("hide")
+    play.classList.remove("hide")
+    pause.classList.add("hide")
   })
 
   previousMusic.addEventListener('click', () => {
     player.previous()
+    play.classList.remove("hide")
+    pause.classList.add("hide")
   })
 
   player.seekbar.addEventListener("input", () => {
@@ -37,12 +41,5 @@ export function PlayerControls() {
   player.seekbar.addEventListener("change", () => {
     player.setSeek(seekbar.value)
   })
-
-
-  player.audio.addEventListener("timeupdate", () => {
-    player.timeUpdate()
-  })
-
-  console.log(player.audio)
 
 }
