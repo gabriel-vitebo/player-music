@@ -17,5 +17,5 @@
   <li>JavaScript</li>
   <li>Git Github</li>
   
-<h3> O projeto contem apenas 7 músicas da minha escolha, apenas para demonstrar como funciona o player
+<p> O projeto contem apenas 7 músicas da minha escolha, apenas para demonstrar como funciona o player</p>
 <h3> Contato: vitebo@outlook.com</h3>
